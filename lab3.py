@@ -10,6 +10,24 @@
 # Define a function called get_number(prompt) that returns an integer. 
 # Include a while loop and try/except blocks inside the function to handle non-integer inputs.
 
+def get_number(prompt):
+    
+    while True:
+      
+      num=input("please enter a")
+      
+        try:
+             
+            num=input(int(prompt))
+        except:
+            print("please enter a number")
+            
+
+
+
+
+
+    
 
 
 # Use the get_number function to ask for a numerator, then again for a denominator.
