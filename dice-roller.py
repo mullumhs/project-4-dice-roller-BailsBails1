@@ -26,28 +26,50 @@ import random
 
 #make function that takes number of sides 
 
-def get_sides():
 
+def get_number(prompt):
+    #makes a while true loop to continue the program forever if an invalid input is entered 
     while True:
+        #asks user for a number and stores it 
         try:
-            sides=input(int(prompt))
-            
-            return sides 
-        
+            number=int(input(prompt))
+            return(number)
+            #if user enters anything but a valid number a prompt is displayed and question is asked again 
         except:
-            print("please enter a valid choice")
+            print("please enter a valid integer")
+          
+
+          
+
+def roll(sides, qty):
+    total = 0
+    for i in range(1, qty+1):
+        rnd = random.randint(1, sides)
+        total = total + rnd
+        print(rnd)
+    print(f"The total is {total}")
+
+
+
+sides=get_number("how many sides would you have on your dice:  ")
+qty=get_number("how many times yould you like to roll the dice: ")
+ 
+roll(sides,qty)
+        
+    
+   
+
+
+   
 
 
 
 
-get_sides()
 
 
-'''
-def output():
-    for i in range(qty)
 
-'''
+
+
 
 
 #print output with total.
